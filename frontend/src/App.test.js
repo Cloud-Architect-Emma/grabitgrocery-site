@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders App component', () => {
+test('renders frontend message', () => {
   render(<App />);
-  const appElement = screen.getByText(/API says:/i);
-  expect(appElement).toBeInTheDocument();
+  const messageElement = screen.getByText(/hello from frontend/i);
+  expect(messageElement).toBeInTheDocument();
 });

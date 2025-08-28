@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 function App() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    setMessage('Hello from frontend!');
-  }, []);
-
-  return <div>{message}</div>;
+  return (
+    <div>
+      <h1>Hello from frontend!</h1>
+    </div>
+  );
 }
 
 export default App;
