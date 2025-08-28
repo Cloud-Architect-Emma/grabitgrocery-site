@@ -54,7 +54,10 @@ jobs:
 
       - name: Tag and Push images
         run: |
-          docker tag my-backend yourusername/my-backend:latest
-          docker tag my-frontend yourusername/my-frontend:latest
-          docker push yourusername/my-backend:latest
-          docker push yourusername/my-frontend:latest
+               - name: Tag and Push images
+        run: |
+          docker tag my-backend cidcpipeline/my-backend:latest
+          docker tag my-frontend cidcpipeline/my-frontend:latest
+          docker push cidcpipeline/my-backend:latest
+          docker push cidcpipeline/my-frontend:latest
+
