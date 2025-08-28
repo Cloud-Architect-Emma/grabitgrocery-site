@@ -1,13 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { render, screen } from '@testing-library/react';
+import App from './App';
 
-function App() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    setMessage('Hello from frontend!');
-  }, []);
-
-  return <div>{message}</div>;
-}
-
-export default App;
+test('renders Hello from frontend! message', () => {
+  render(<App />);
+  const messageElement = screen.getByText(/Hello from frontend!/i);
+  expect(messageElement).toBeInTheDocument();
+});
