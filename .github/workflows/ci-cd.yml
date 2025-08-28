@@ -54,10 +54,7 @@ jobs:
 
       - name: Tag and Push images
         run: |
-               - name: Tag and Push images
-        run: |
           docker tag my-backend cidcpipeline/my-backend:latest
           docker tag my-frontend cidcpipeline/my-frontend:latest
           docker push cidcpipeline/my-backend:latest
           docker push cidcpipeline/my-frontend:latest
-
