@@ -25,7 +25,7 @@ jobs:
       # 3. Install backend dependencies and run tests
       - name: Install backend dependencies
         working-directory: ./backend
-        run: npm install
+        run: npm ci  # 'ci' is better for CI environments
 
       - name: Run backend tests
         working-directory: ./backend
@@ -34,11 +34,11 @@ jobs:
       # 4. Install frontend dependencies and run tests
       - name: Install frontend dependencies
         working-directory: ./frontend
-        run: npm install
+        run: npm ci  # ensures exact dependency versions from package-lock.json
 
       - name: Run frontend tests
         working-directory: ./frontend
-        run: npm test -- --watchAll=false
+        run: npm test -- --watchAll=false --env=jsdom  # forces jsdom environment
 
   docker:
     name: Build & Push Docker Images
