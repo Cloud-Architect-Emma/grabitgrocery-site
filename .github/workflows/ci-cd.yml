@@ -38,12 +38,12 @@ jobs:
 
       - name: Run frontend tests
         working-directory: ./frontend
-        run: npm test -- --watchAll=false --env=jsdom
+        run: npx react-scripts test --watchAll=false --env=jsdom
 
   docker:
     name: Build & Push Docker Images
     runs-on: ubuntu-latest
-    needs: test
+    needs: test  # Only runs if tests pass
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
