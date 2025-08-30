@@ -3,7 +3,7 @@ name: CI/CD - Build & Push to ECR
 on:
   push:
     branches:
-      - main   # Trigger on push to main branch
+      - main
 
 jobs:
   build-and-push:
