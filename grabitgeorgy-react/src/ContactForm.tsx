@@ -20,7 +20,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <section id="contact" className="contact">
-      <h2>Contact Georgy</h2>
+      <h2>Contact Grabit Grocery</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
