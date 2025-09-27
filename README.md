@@ -1,75 +1,56 @@
-# React + TypeScript + Vite
+# Grabit Grocery 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Grabit Grocery is a sleek, responsive web app built to showcase Georgy's fresh produce and vibrant brand. Developed with React 19, Vite, and TypeScript, it delivers fast performance, clean design, and a delightful user experience across devices.
 
-Currently, two official plugins are available:
+## 🌐 Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [Visit Grabit Grocery](https://grabitgrocery-site.vercel.app)(https://grabit-grocery-site.netlify.app)
 
-## React Compiler
+##  Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **React 19** – Modern component architecture
+- **Vite** – Lightning-fast bundler and dev server
+- **TypeScript** – Type-safe development
+- **CSS Modules** – Scoped styling for components
+- **Netlify & Vercel** – Dual deployment for reliability
 
-Note: This will impact Vite dev & build performances.
+## Features
 
-## Expanding the ESLint configuration
+- Responsive layout for mobile and desktop
+- Modular components: Header, Gallery, About, ContactForm
+- Smooth hover effects and subtle animations
+- Clean routing and fast load times
+- Styled with a custom color palette and Google Fonts
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Clone the repo and run locally:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+git clone https://github.com/Cloud-Architect-Emma/grabitgrocery-site.git
+cd grabitgrocery-site
+npm install
+npm run dev
+Folder Structure
+Code
+src/
+├── App.tsx
+├── main.tsx
+├── Header.tsx
+├── Gallery.tsx
+├── About.tsx
+├── ContactForm.tsx
+├── assets/
+└── index.css
+Design Highlights
+Color Palette: Soft pinks and vibrant accents for a fresh, friendly feel
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Typography: Clean and modern with the Inter font
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Layout: Centered content with flexible grid-based gallery
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Accessibility: Semantic HTML and responsive design
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Credits
+Built by Emmanuela for Grabit brand vision. Designed to be fast, fresh, and future-ready.
+
