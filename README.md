@@ -10,11 +10,11 @@ Grabit Grocery is a sleek, responsive web app built to showcase Georgy's fresh p
 ## Screenshots
 
 ### Homepage
-![Homepage](./screenshots/homepage.png)
+![Homepage](./public/homepage.png)
 
 
 ### Gallery
-![Gallery](./screenshots/gallery.png)
+![Gallery](./public/gallery.png)
 
 ## Tech Stack
 
