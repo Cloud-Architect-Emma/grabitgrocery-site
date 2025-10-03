@@ -62,4 +62,4 @@ Layout: Centered content with flexible grid-based gallery
 Accessibility: Semantic HTML and responsive design
 
 Credits
-Built by Emmanuela for Grabit brand vision. Designed to be fast, fresh, and future-ready.
+Built by Emma for Grabit brand vision. Designed to be fast, fresh, and future-ready.
