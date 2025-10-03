@@ -37,3 +37,21 @@ jobs:
         run: |
           docker build -t ${{ secrets.ECR_REGISTRY }}/${{ secrets.ECR_REPO_FRONTEND }}:latest ./frontend
           docker push ${{ secrets.ECR_REGISTRY }}/${{ secrets.ECR_REPO_FRONTEND }}:latest
+
+      - name: Send Email Notification
+        if: success() || failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.mail.yahoo.com
+          server_port: 465
+          username: emmanuela_prince@yahoo.com
+          password: ${{ secrets.YAHOO_APP_PASSWORD }}
+          subject: ECR Workflow Notification - ${{ job.status }}
+          to: emmanuela_prince@yahoo.com
+          from: emmanuela_prince@yahoo.com
+          body: |
+            The ECR workflow has completed.
+            Status: ${{ job.status }}
+            Commit: ${{ github.sha }}
+            Repository: ${{ github.repository }}
+            View it here: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
